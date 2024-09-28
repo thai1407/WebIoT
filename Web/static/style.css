@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* Sắp xếp theo chiều dọc */
+    justify-content: space-between;
+    /* Căn giữa giữa các phần */
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.sensor-container {
+    display: flex;
+    /* Sử dụng flex để sắp xếp các thẻ theo hàng */
+    justify-content: space-around;
+    align-items: center;
+    /* Căn giữa các thẻ */
+    flex-wrap: wrap;
+    /* Cho phép thẻ xuống hàng nếu không đủ chỗ */
+    width: 100%;
+    /* Đảm bảo chiều rộng đầy đủ */
+    flex: 1;
+    align-items: baseline;
+}
+
+.sensor-card {
+    text-align: center;
+    width: 20rem;
+    /* Kích thước thẻ */
+    height: 20rem;
+    /* Kích thước thẻ */
+    margin: 10px;
+    /* Khoảng cách giữa các thẻ */
+}
+
+.circle {
+    width: 20rem;
+    /* Kích thước vòng tròn */
+    height: 20rem;
+    /* Kích thước vòng tròn */
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Màu nền bên trong */
+    overflow: hidden;
+    /* Đảm bảo viền không tràn ra ngoài */
+}
+
+.circle-border {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: conic-gradient(#4dd0e1 0%, #e0e0e0 0%);
+    /* Màu viền mặc định */
+    transition: background 0.5s ease;
+    /* Thay đổi thời gian chuyển động */
+}
+
+.inside-circle {
+    position: relative;
+    /* Thay đổi thành relative để nó nằm trên viền */
+    font-size: 35px;
+    font-weight: 1000;
+    /* Kích thước font */
+    border-radius: 50%;
+    background-color: white;
+    width: 15rem;
+    /* Kích thước nhỏ hơn */
+    height: 15rem;
+    /* Kích thước nhỏ hơn */
+    color: #333;
+    display: flex;
+    /* Sử dụng flex để căn giữa */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    z-index: 1;
+    /* Đặt lên trên cùng */
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-25%,70%);
+}
+
+.thermometer {
+    position: relative;
+    height: 400px;
+    width: 100px;
+    
+    transform: translate(-50%,-40%);
+}
+
+.temp-tile{
+    transform: translate(50%, -270px);
+}
+
+.borders{
+    position: relative;
+    width: 40px;
+    height: 250px;
+    border: 5px solid #3a3939;
+    border-bottom: none;
+    border-radius: 40px 40px 0 0;
+    transform: translate(50%,59%);
+    bottom: 5px;
+    z-index: 1;
+    background: #f0f0f0;
+    
+}
+
+.sensor-bar {
+    height: 0; /* Bắt đầu với chiều cao 0 */
+    width: 30px;
+    background-color: red;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    transform-origin: bottom;
+    bottom: 0px; /* Đặt ở dưới cùng */
+    left: 50%;
+    transform: translate(-50%,20%);
+    transition: height 1s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+
+.circle-term {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    transform: translate(-4%,90%);
+    border: 5px solid #3a3939;
+    
+}
+.borders::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    z-index: 2;
+    bottom: -30px;
+    right: 5px;
+
+
+}
+.circle-term::after {
+    content: " ";
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sensor-value {
+    font-size: 35px;
+    font-weight: 1000;
+    color: #333;
+    margin-top: 10px;
+    transform: translate(250%,0);
+}
+
+h3{
+    font-size:2em;
+    font-style: bold;
+    color: #333;
+}

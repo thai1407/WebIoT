@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết kế Thẻ Cảm Biến Động</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <nav>
+        <h1>Sensors measurements</h1>
+    </nav>
+    <div class="sensor-container">
+        <div class="sensor-card">
+            <h3>Air Humidity</h3>
+            <div class="circle">
+                <div class="circle-border" id="circleBorder1"></div>
+                <div class="inside-circle" id="air-humidity" >{{air_humidity}}</div>
+            </div>
+        </div>
+        <div class="sensor-card">
+            <h3>Dirt Humidity</h3>
+            <div class="circle">
+                <div class="circle-border" id="circleBorder2"></div>
+                <div class="inside-circle" id="dirt-humidity">{{dirt_humidity}}</div>
+            </div>
+        </div>
+        <div class="sensor-card">
+            
+            <div class="container">
+                <h3 class="temp-tile">Air Temperature</h3>
+                <div class="thermometer" id="thermometer">
+                    <div class="borders">
+                        <div class="sensor-bar" id="circleBorder3">
+                            <div class="sensor-value" id="air-temperature">0°C</div>
+
+                        </div>
+                    </div>
+                    <div class="circle-term" id="sensorCircle"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js')}}"></script>
+
+</body>
+</html>
