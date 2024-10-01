@@ -2,9 +2,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    /* Sắp xếp theo chiều dọc */
     justify-content: space-between;
-    /* Căn giữa giữa các phần */
     height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
@@ -21,14 +19,10 @@ nav {
 
 .sensor-container {
     display: flex;
-    /* Sử dụng flex để sắp xếp các thẻ theo hàng */
     justify-content: space-around;
     align-items: center;
-    /* Căn giữa các thẻ */
     flex-wrap: wrap;
-    /* Cho phép thẻ xuống hàng nếu không đủ chỗ */
     width: 100%;
-    /* Đảm bảo chiều rộng đầy đủ */
     flex: 1;
     align-items: baseline;
 }
@@ -36,27 +30,20 @@ nav {
 .sensor-card {
     text-align: center;
     width: 20rem;
-    /* Kích thước thẻ */
     height: 20rem;
-    /* Kích thước thẻ */
     margin: 10px;
-    /* Khoảng cách giữa các thẻ */
 }
 
 .circle {
     width: 20rem;
-    /* Kích thước vòng tròn */
     height: 20rem;
-    /* Kích thước vòng tròn */
     border-radius: 50%;
     position: relative;
     margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Màu nền bên trong */
     overflow: hidden;
-    /* Đảm bảo viền không tràn ra ngoài */
 }
 
 .circle-border {
@@ -67,32 +54,22 @@ nav {
     top: 0;
     left: 0;
     background: conic-gradient(#4dd0e1 0%, #e0e0e0 0%);
-    /* Màu viền mặc định */
     transition: background 0.5s ease;
-    /* Thay đổi thời gian chuyển động */
 }
 
 .inside-circle {
     position: relative;
-    /* Thay đổi thành relative để nó nằm trên viền */
     font-size: 35px;
     font-weight: 1000;
-    /* Kích thước font */
     border-radius: 50%;
     background-color: white;
     width: 15rem;
-    /* Kích thước nhỏ hơn */
     height: 15rem;
-    /* Kích thước nhỏ hơn */
     color: #333;
     display: flex;
-    /* Sử dụng flex để căn giữa */
     justify-content: center;
-    /* Căn giữa theo chiều ngang */
     align-items: center;
-    /* Căn giữa theo chiều dọc */
     z-index: 1;
-    /* Đặt lên trên cùng */
 }
 
 .container {
@@ -130,16 +107,16 @@ nav {
 }
 
 .sensor-bar {
-    height: 0; /* Bắt đầu với chiều cao 0 */
+    height: 0; 
     width: 30px;
     background-color: red;
     border-radius: 25px 25px 0 0;
     position: absolute;
     transform-origin: bottom;
-    bottom: 0px; /* Đặt ở dưới cùng */
+    bottom: 0px; 
     left: 50%;
     transform: translate(-50%,20%);
-    transition: height 1s ease; /* Thêm hiệu ứng chuyển động */
+    transition: height 1s ease; 
 }
 
 
